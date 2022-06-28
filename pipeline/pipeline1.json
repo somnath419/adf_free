@@ -62,10 +62,30 @@
 					"variableName": "str",
 					"value": "Somnath"
 				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "status",
+					"value": "Sucessful"
+				}
 			}
 		],
 		"variables": {
 			"str": {
+				"type": "String"
+			},
+			"status": {
 				"type": "String"
 			}
 		},
