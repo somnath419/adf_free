@@ -7,7 +7,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Set variable1",
+						"activity": "var1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -54,7 +54,7 @@
 				]
 			},
 			{
-				"name": "Set variable1",
+				"name": "var1",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"userProperties": [],
@@ -64,7 +64,7 @@
 				}
 			},
 			{
-				"name": "Set variable2",
+				"name": "var2",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
