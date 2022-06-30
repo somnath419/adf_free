@@ -27,7 +27,7 @@
 						"type": "Copy",
 						"dependsOn": [
 							{
-								"activity": "Set variable1",
+								"activity": "var1",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -76,13 +76,30 @@
 						]
 					},
 					{
-						"name": "Set variable1",
+						"name": "var1",
 						"type": "SetVariable",
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
 							"variableName": "str",
 							"value": "Somnath"
+						}
+					},
+					{
+						"name": "var2",
+						"type": "SetVariable",
+						"dependsOn": [
+							{
+								"activity": "Copy data1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "status",
+							"value": "Sucessful"
 						}
 					}
 				],
@@ -92,6 +109,9 @@
 				},
 				"variables": {
 					"str": {
+						"type": "String"
+					},
+					"status": {
 						"type": "String"
 					}
 				},
